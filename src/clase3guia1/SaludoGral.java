@@ -5,6 +5,8 @@
  */
 package clase3guia1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Lucas E. Sayago
@@ -28,8 +30,8 @@ public class SaludoGral extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jTnombre = new javax.swing.JTextField();
+        jBsaludar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,12 +39,12 @@ public class SaludoGral extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 51, 255));
         jLabel1.setText("Escriba un nombre para saludar!!");
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 102));
-        jButton1.setForeground(new java.awt.Color(51, 102, 255));
-        jButton1.setText("Saludar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBsaludar.setBackground(new java.awt.Color(255, 255, 102));
+        jBsaludar.setForeground(new java.awt.Color(51, 102, 255));
+        jBsaludar.setText("Saludar");
+        jBsaludar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBsaludarActionPerformed(evt);
             }
         });
 
@@ -56,10 +58,10 @@ public class SaludoGral extends javax.swing.JFrame {
                         .addGap(93, 93, 93)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1)))
+                            .addComponent(jTnombre)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(jButton1)))
+                        .addGap(204, 204, 204)
+                        .addComponent(jBsaludar)))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -67,19 +69,21 @@ public class SaludoGral extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(jButton1)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(jTnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addComponent(jBsaludar)
+                .addGap(56, 56, 56))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jBsaludarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsaludarActionPerformed
+        String nombre=jTnombre.getText();
+        
+        JOptionPane.showMessageDialog(this,"¡ hola " + nombre +" ! ");
+    }//GEN-LAST:event_jBsaludarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,8 +121,8 @@ public class SaludoGral extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jBsaludar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTnombre;
     // End of variables declaration//GEN-END:variables
 }
