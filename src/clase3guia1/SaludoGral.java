@@ -36,8 +36,6 @@ public class SaludoGral extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 51, 255));
         jLabel1.setText("Escriba un nombre para saludar!!");
 
-        jTextField1.setText("jTextField1");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
