@@ -39,6 +39,12 @@ public class SaludoGral extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 51, 255));
         jLabel1.setText("Escriba un nombre para saludar!!");
 
+        jTnombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTnombreActionPerformed(evt);
+            }
+        });
+
         jBsaludar.setBackground(new java.awt.Color(255, 255, 102));
         jBsaludar.setForeground(new java.awt.Color(51, 102, 255));
         jBsaludar.setText("Saludar");
@@ -84,6 +90,10 @@ public class SaludoGral extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(this,"¡ hola " + nombre +" ! ");
     }//GEN-LAST:event_jBsaludarActionPerformed
+
+    private void jTnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTnombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTnombreActionPerformed
 
     /**
      * @param args the command line arguments
