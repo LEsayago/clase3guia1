@@ -5,6 +5,8 @@
  */
 package clase3guia1;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Admin
@@ -27,21 +29,53 @@ public class fechas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jdfecha = new com.toedter.calendar.JDateChooser();
+        jLfecha = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jdfecha.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jdfechaPropertyChange(evt);
+            }
+        });
+
+        jLfecha.setText("fecha:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(jdfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(jLfecha)))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jdfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(jLfecha)
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jdfechaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jdfechaPropertyChange
+
+        if(jdFecha.getDate()!=null){
+        
+        LocalDate fechaN=jdfecha.getDate().toInstant().atZone(zoneid.systemDefault()).toLocalDate();
+    }
+    }//GEN-LAST:event_jdfechaPropertyChange
 
     /**
      * @param args the command line arguments
@@ -79,5 +113,7 @@ public class fechas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLfecha;
+    private com.toedter.calendar.JDateChooser jdfecha;
     // End of variables declaration//GEN-END:variables
 }
